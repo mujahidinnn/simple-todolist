@@ -1,13 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@400&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+  font-family: "Kalam", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+* {
+  font-size: 15px;
+  color: #222;
+}
+h1 {
+  font-size: 2rem;
+}
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dark-mode {
+  background-color: #000;
+}
+.dark-mode h1 {
+  color: #ffff;
+}
+.dark-mode .icon-dark-mode {
+  color: #fff;
+}
+.toggle-dark-mode {
+  background-color: transparent;
+  border: none;
+}
+.toggle-dark-mode:hover {
+  /* background-color: #ededed; */
+  cursor: pointer;
+}
+.toggle-dark-mode:focus {
+  outline: none;
+}
+.icon-dark-mode {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.container {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  min-height: 100vh;
+}
+.notes-list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.note.new {
+  background-color: #67d7cc;
+}
+.new textarea {
+  border: none;
+  resize: none;
+  background-color: #67d7cc;
+  font-family: "Kalam", cursive;
+}
+.new textarea:focus {
+  outline: none;
+}
+.save {
+  background-color: #e1e1e1;
+  border: none;
+  border-radius: 15px;
+  padding: 2px 12px 2px;
+  font-family: "Kalam", cursive;
+  font-weight: 700;
+}
+.save:hover {
+  background-color: #ededed;
+  cursor: pointer;
+}
+.save:focus {
+  outline: none;
+}
+.note {
+  background-color: #fef68a;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.delete-icon {
+  cursor: pointer;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+}
+
+.search input {
+  border: none;
+  background-color: rgb(233, 233, 233);
+  width: 100%;
+  font-family: "Kalam", cursive;
+}
+.search input:focus {
+  outline: none;
 }
